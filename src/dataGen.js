@@ -1,18 +1,30 @@
 const request = require('superagent');
 const path = require('path');
+const _ = require('lodash');
 const { sleep, saveData } = require('./_utils');
 
 const DATASET_FOLDER = path.join(__dirname, './datasets'); // Folder where our gathered data will sit
 const BASE_URL = 'https://www.reddit.com/r/stocks/hot/.json'; // Reddit API base url
 const FILENAME = 'data.json'; // Filename for the data
 const FILENAME_ERROR = 'data_error.json'; // Filename for when something goes wrong and we want to save our progress
-const DATASET_SIZE = 10000; // How many posts we want in total
+const DATASET_SIZE = 10 * 1000; // How many posts we want in total
 const PAGE_SIZE = 100; // How many posts we would like per API call
 const G = 'GLOBAL'; // Region
+const PROPS = [
+  'selftext',
+  'title',
+  'upvote_ratio',
+  'ups',
+  'total_awards_received',
+  'score',
+  'created',
+  'num_comments',
+  'created_utc',
+];
 
 const getPage = async (after) => {
   const response = await request.get(BASE_URL).query({ g: G, limit: PAGE_SIZE, after }); // Get the actual response from the Reddit API
-  const posts = response.body.data.children;
+  const posts = response.body.data.children.map((post) => _.pick(post.data, PROPS));
   const newAfter = response.body.data.after;
   return [newAfter, posts];
 };

@@ -10,8 +10,8 @@ const UNIX_DAY_LENGTH = 86400;
 const findEarliestDateUnix = (posts) => {
   let earliestDateUnix = Number.MAX_SAFE_INTEGER;
   posts.forEach((post) => {
-    if (post.data.created_utc < earliestDateUnix) {
-      earliestDateUnix = post.data.created_utc;
+    if (post.created_utc < earliestDateUnix) {
+      earliestDateUnix = post.created_utc;
     }
   });
   return earliestDateUnix;
@@ -31,7 +31,7 @@ const roundUnixToStartOfDay = (unixDate) => {
 const bin = (posts, startTimeUnix, binSize) => {
   const bins = {};
   posts.forEach((post) => {
-    const binIndex = Math.floor((post.data.created_utc - startTimeUnix) / binSize);
+    const binIndex = Math.floor((post.created_utc - startTimeUnix) / binSize);
     if (!bins[binIndex]) {
       bins[binIndex] = [];
     }
@@ -45,14 +45,13 @@ const start = async () => {
 
   uniqueDays = [];
   posts.forEach((post) => {
-    const date = new Date(post.data.created_utc * 1000);
+    const date = new Date(post.created_utc * 1000);
     const str = `${date.getDay()}-${date.getMonth()}-${date.getFullYear()}`;
     if (!uniqueDays.includes(str)) {
       uniqueDays.push(str);
     }
   });
   console.log(uniqueDays);
-  return;
 
   let earliestDateUnix = findEarliestDateUnix(posts);
   earliestDateUnix = roundUnixToStartOfDay(earliestDateUnix);
