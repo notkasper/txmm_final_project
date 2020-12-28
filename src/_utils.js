@@ -12,7 +12,10 @@ const saveData = (filePath, data) => {
   fs.writeFileSync(filePath, JSON.stringify(data));
 };
 
+const readData = (filePath) => JSON.parse(fs.readFileSync(filePath));
+
 module.exports = {
   sleep,
   saveData,
+  readData,
 };

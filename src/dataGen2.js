@@ -1,6 +1,6 @@
 const path = require('path');
 const request = require('superagent');
-const { saveData } = require('./_utils');
+const { saveData, readData } = require('./_utils');
 
 const DATASET_FOLDER = path.join(__dirname, './datasets'); // Folder where our gathered data will sit
 const FILENAME = 'pusshift_test.json'; // Filename for the data
@@ -22,9 +22,9 @@ const getPage = async (after, before) => {
   console.log('new request started...');
   const res = await request.get(BASE_URL).query({
     after,
-    before: 1609196553,
+    before,
     limit: PAGE_SIZE,
-    // sort_type: 'created_utc',
+    sort_type: 'created_utc',
     // sort: 'desc',
     subreddit: 'stocks',
   });
@@ -32,21 +32,35 @@ const getPage = async (after, before) => {
   return posts;
 };
 
+const saveDayPosts = async (key, posts) => {
+  let allPosts = readData(`${DATASET_FOLDER}/${FILENAME}`);
+  if (!allPosts) {
+    allPosts = {};
+  }
+  allPosts[key] = posts;
+  saveData(`${DATASET_FOLDER}/${FILENAME}`, allPosts);
+};
+
 const getAllPostsWithinTimeframe = async (after, before) => {
   let lastUTC = after;
   let posts = [];
-  while (posts.length < DATASET_SIZE) {
+  while (lastUTC < before) {
     try {
-      const newPosts = await getPage(lastUTC, lastUTC);
-      console.log(newPosts.length);
-      lastUTC = newPosts[newPosts.length - 1].created_utc;
+      console.log(lastUTC);
+      const newPosts = await getPage(lastUTC, before);
       posts = posts.concat(newPosts);
+      posts.forEach((post) => {
+        if (post.created_utc > lastUTC) {
+          lastUTC = post.created_utc;
+        }
+      });
     } catch (error) {
       console.error(error);
     }
     console.log(`Collected ${posts.length} posts`);
     console.log(`last post: ${new Date(lastUTC * 1000)}`);
   }
+  console.log('Collected all posts for this day');
   return posts;
 };
 
@@ -58,9 +72,11 @@ const getPostsInDay = async (utc) => {
 };
 
 const start = async () => {
-  const after = 1577836800;
-  const posts = await getPostsInDay(after);
-  saveData(`${DATASET_FOLDER}/${FILENAME}`, posts);
+  // TODO: scrape more than one day
+  const dayUTC = 1577836800;
+  const posts = await getPostsInDay(dayUTC);
+  const key = new Date(dayUTC * 1000).toString().substring(10);
+  saveDayPosts(posts, key);
 };
 
 start();
