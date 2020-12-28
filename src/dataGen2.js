@@ -22,22 +22,14 @@ const getPage = async (after, before) => {
   console.log('new request started...');
   const res = await request.get(BASE_URL).query({
     after,
-    // before: 1580515200,
+    before: 1609196553,
     limit: PAGE_SIZE,
     // sort_type: 'created_utc',
     // sort: 'desc',
     subreddit: 'stocks',
   });
-  console.log(res.request.url);
   const posts = res.body.data;
-
-  let lastUTC = after;
-  posts.forEach((post) => {
-    if (post.created_utc > lastUTC) {
-      lastUTC = post.created_utc;
-    }
-  });
-  return [posts, lastUTC];
+  return posts;
 };
 
 const getAllPostsWithinTimeframe = async (after, before) => {
@@ -45,8 +37,9 @@ const getAllPostsWithinTimeframe = async (after, before) => {
   let posts = [];
   while (posts.length < DATASET_SIZE) {
     try {
-      [newPosts, newLastUTC] = await getPage(lastUTC, before);
-      lastUTC = newLastUTC;
+      const newPosts = await getPage(lastUTC, lastUTC);
+      console.log(newPosts.length);
+      lastUTC = newPosts[newPosts.length - 1].created_utc;
       posts = posts.concat(newPosts);
     } catch (error) {
       console.error(error);

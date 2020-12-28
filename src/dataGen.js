@@ -5,9 +5,9 @@ const { sleep, saveData } = require('./_utils');
 
 const DATASET_FOLDER = path.join(__dirname, './datasets'); // Folder where our gathered data will sit
 const BASE_URL = 'https://www.reddit.com/r/stocks/hot/.json'; // Reddit API base url
-const FILENAME = 'data.json'; // Filename for the data
+const FILENAME = 'data_50k.json'; // Filename for the data
 const FILENAME_ERROR = 'data_error.json'; // Filename for when something goes wrong and we want to save our progress
-const DATASET_SIZE = 10 * 1000; // How many posts we want in total
+const DATASET_SIZE = 50 * 1000; // How many posts we want in total
 const PAGE_SIZE = 100; // How many posts we would like per API call
 const G = 'GLOBAL'; // Region
 const PROPS = [

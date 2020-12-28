@@ -3,7 +3,7 @@ const path = require('path');
 const { saveData } = require('./_utils');
 
 const DATASET_FOLDER = path.join(__dirname, './datasets');
-const POSTS_FILENAME = 'data.json';
+const POSTS_FILENAME = 'pusshift_test.json';
 const OUTPUT_FILENAME = 'binned_data.json';
 const UNIX_DAY_LENGTH = 86400;
 
@@ -28,10 +28,10 @@ const roundUnixToStartOfDay = (unixDate) => {
   return date.getTime() / 1000;
 };
 
-const bin = (posts, startTimeUnix, binSize) => {
+const bin = (posts) => {
   const bins = {};
   posts.forEach((post) => {
-    const binIndex = Math.floor((post.created_utc - startTimeUnix) / binSize);
+    const binIndex = new Date(post.created_utc * 1000).getDate();
     if (!bins[binIndex]) {
       bins[binIndex] = [];
     }
@@ -42,21 +42,10 @@ const bin = (posts, startTimeUnix, binSize) => {
 
 const start = async () => {
   const posts = readPosts();
-
-  uniqueDays = [];
-  posts.forEach((post) => {
-    const date = new Date(post.created_utc * 1000);
-    const str = `${date.getDay()}-${date.getMonth()}-${date.getFullYear()}`;
-    if (!uniqueDays.includes(str)) {
-      uniqueDays.push(str);
-    }
-  });
-  console.log(uniqueDays);
-
   let earliestDateUnix = findEarliestDateUnix(posts);
   earliestDateUnix = roundUnixToStartOfDay(earliestDateUnix);
   const binSize = UNIX_DAY_LENGTH;
-  const bins = bin(posts, earliestDateUnix, binSize);
+  const bins = bin(posts);
   Object.values(bins).forEach((bin) => console.log(bin.length));
   saveData(`${DATASET_FOLDER}/${OUTPUT_FILENAME}`, bins);
 };
