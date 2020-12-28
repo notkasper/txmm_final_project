@@ -42,6 +42,18 @@ const bin = (posts, startTimeUnix, binSize) => {
 
 const start = async () => {
   const posts = readPosts();
+
+  uniqueDays = [];
+  posts.forEach((post) => {
+    const date = new Date(post.data.created_utc * 1000);
+    const str = `${date.getDay()}-${date.getMonth()}-${date.getFullYear()}`;
+    if (!uniqueDays.includes(str)) {
+      uniqueDays.push(str);
+    }
+  });
+  console.log(uniqueDays);
+  return;
+
   let earliestDateUnix = findEarliestDateUnix(posts);
   earliestDateUnix = roundUnixToStartOfDay(earliestDateUnix);
   const binSize = UNIX_DAY_LENGTH;

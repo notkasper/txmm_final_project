@@ -16,6 +16,7 @@ const getPage = async (after) => {
   const newAfter = response.body.data.after;
   return [newAfter, posts];
 };
+
 const start = async () => {
   let data = []; // Buffer for all our posts
   let after = null; // The Reddit API uses this as a 'this is the last post I've seen'
