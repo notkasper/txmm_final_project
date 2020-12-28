@@ -1,6 +1,6 @@
 const request = require('superagent');
-const fs = require('fs');
 const path = require('path');
+const { sleep, saveData } = require('./_utils');
 
 const DATASET_FOLDER = path.join(__dirname, './datasets'); // Folder where our gathered data will sit
 const BASE_URL = 'https://www.reddit.com/r/stocks/hot/.json'; // Reddit API base url
@@ -16,19 +16,6 @@ const getPage = async (after) => {
   const newAfter = response.body.data.after;
   return [newAfter, posts];
 };
-
-const saveData = (filePath, data) => {
-  fs.writeFileSync(filePath, JSON.stringify(data));
-};
-
-const sleep = async (time) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve();
-    }, time);
-  });
-};
-
 const start = async () => {
   let data = []; // Buffer for all our posts
   let after = null; // The Reddit API uses this as a 'this is the last post I've seen'
