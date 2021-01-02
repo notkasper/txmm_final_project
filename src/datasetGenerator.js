@@ -6,7 +6,7 @@ const fs = require("fs");
 
 const DAYS = 31;
 const PAGE_SIZE = 100;
-const START_DATE_UTC = 1577836800;
+const START_DATE_UTC = 1601510400;
 const DAY_LENGTH_UTC = 86400;
 const BASE_URL = "https://api.pushshift.io/reddit/search/submission";
 const OUTPUT = path.join(__dirname, "./stock_posts.json");
@@ -40,7 +40,18 @@ const getPostsAfter = async (after, before) => {
     limit: PAGE_SIZE,
     subreddit: "stocks",
   });
+
   const posts = res.body.data.map((post) => _.pick(post, PROPS));
+  const lastUTC = posts.reduce((acc, curr) => {
+    if (curr.created_utc > acc) {
+      acc = curr.created_utc;
+    }
+    return acc;
+  }, after);
+  const diff = lastUTC - after;
+  const hours = Math.ceil(diff / 3600);
+  console.log(`Gathered posts span: ${hours} hours`);
+
   return posts;
 };
 
