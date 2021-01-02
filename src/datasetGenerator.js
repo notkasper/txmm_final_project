@@ -4,7 +4,7 @@ const _ = require("lodash");
 const ora = require("ora");
 const fs = require("fs");
 
-const DAYS = 2;
+const DAYS = 31;
 const PAGE_SIZE = 100;
 const START_DATE_UTC = 1577836800;
 const DAY_LENGTH_UTC = 86400;
@@ -55,19 +55,21 @@ const generateDataset = async () => {
   for (let i = 0; i < DAYS; i++) {
     const after = START_DATE_UTC + i * DAY_LENGTH_UTC;
     const before = after + DAY_LENGTH_UTC;
-    spinner.text = `Total posts: ${countPosts(
+    spinner.text = `${Math.floor((i / DAYS) * 100)}% Total posts: ${countPosts(
       buffer
     )}. Status: awaiting response...`;
     const posts = await getPostsAfter(after, before);
     const date = new Date(after * 1000);
     const key = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
     buffer[key] = posts;
-    spinner.text = `Total posts: ${countPosts(
+    spinner.text = `${Math.floor((i / DAYS) * 100)}% Total posts: ${countPosts(
       buffer
     )}. Status: starting new request...`;
     await sleep(500);
   }
-  spinner.text = `Total posts: ${countPosts(buffer)}. Status: saving posts...`;
+  spinner.text = `100% Total posts: ${countPosts(
+    buffer
+  )}. Status: saving posts...`;
   saveData(OUTPUT, buffer);
   await sleep(500);
   spinner.stop();
