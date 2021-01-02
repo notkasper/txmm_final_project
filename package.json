@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dataGen": "node ./src/dataGen.js"
+    "datagen": "node ./src/datasetGenerator.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.20",
+    "ora": "^5.2.0",
     "superagent": "^6.1.0"
   }
 }
