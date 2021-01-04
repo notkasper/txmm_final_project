@@ -1,6 +1,6 @@
-const fs = require("fs");
+const fs = require('fs');
 
-const tickers = JSON.parse(fs.readFileSync("./tickers.json"));
+const tickers = JSON.parse(fs.readFileSync('./tickers.json'));
 
 let sorted = [];
 tickers.forEach((ticker) => {
@@ -9,3 +9,4 @@ tickers.forEach((ticker) => {
 });
 
 console.log(sorted.length);
+console.log(sorted);
