@@ -1,0 +1,436 @@
+{
+  "53": {
+    "AMD": { "pos": 0.1, "neg": 0.01, "compound": 0.68 },
+    "AMZN": { "pos": 0.08, "neg": 0.02, "compound": 0.58 },
+    "AAPL": { "pos": 0.14, "neg": 0.01, "compound": 0.73 },
+    "COST": { "pos": 0.05, "neg": 0.03, "compound": 0.17 },
+    "FAST": { "pos": 0.09, "neg": 0.0, "compound": 0.44 },
+    "FB": { "pos": 0.1, "neg": 0.01, "compound": 0.87 },
+    "GOOGL": { "pos": 0.06, "neg": 0.01, "compound": 0.55 }
+  },
+  "52": {
+    "AMD": { "pos": 0.14, "neg": 0.0, "compound": 0.87 },
+    "AMZN": { "pos": 0.07, "neg": 0.03, "compound": 0.19 },
+    "AAPL": { "pos": 0.12, "neg": 0.02, "compound": 0.58 },
+    "COST": { "pos": 0.13, "neg": 0.05, "compound": 0.78 },
+    "FAST": { "pos": 0.07, "neg": 0.0, "compound": 0.81 },
+    "FB": { "pos": 0.08, "neg": 0.08, "compound": 0.01 },
+    "GOOG": { "pos": 0.2, "neg": 0.01, "compound": 0.98 },
+    "INTC": { "pos": 0.15, "neg": 0.0, "compound": 0.9 }
+  },
+  "51": {
+    "AMD": { "pos": 0.06, "neg": 0.01, "compound": 0.5 },
+    "AMZN": { "pos": 0.17, "neg": 0.04, "compound": 0.93 },
+    "AAPL": { "pos": 0.03, "neg": 0.02, "compound": 0.18 },
+    "TEAM": { "pos": 0.11, "neg": 0.02, "compound": 0.75 },
+    "COST": { "pos": 0.02, "neg": 0.07, "compound": -0.48 },
+    "FAST": { "pos": 0.09, "neg": 0.05, "compound": 0.53 },
+    "FB": { "pos": 0.1, "neg": 0.03, "compound": 0.99 }
+  },
+  "50": {
+    "AMD": { "pos": 0.09, "neg": 0.01, "compound": 0.85 },
+    "AMZN": { "pos": 0.11, "neg": 0.02, "compound": 0.64 },
+    "AAPL": { "pos": 0.14, "neg": 0.01, "compound": 0.97 },
+    "TEAM": { "pos": 0.22, "neg": 0.02, "compound": 0.99 },
+    "COST": { "pos": 0.13, "neg": 0.03, "compound": 0.87 },
+    "FAST": { "pos": 0.1, "neg": 0.02, "compound": 0.65 },
+    "FB": { "pos": 0.08, "neg": 0.06, "compound": 0.84 },
+    "GOOGL": { "pos": 0.08, "neg": 0.0, "compound": 0.59 }
+  },
+  "49": {
+    "TEAM": { "pos": 0.09, "neg": 0.08, "compound": 0.15 },
+    "COST": { "pos": 0.12, "neg": 0.03, "compound": 0.98 },
+    "FAST": { "pos": 0.12, "neg": 0.05, "compound": 1.0 }
+  },
+  "48": {
+    "AMZN": { "pos": 0.14, "neg": 0.05, "compound": 0.99 },
+    "AAPL": { "pos": 0.1, "neg": 0.03, "compound": 1.0 },
+    "TEAM": { "pos": 0.13, "neg": 0.1, "compound": 0.98 },
+    "COST": { "pos": 0.14, "neg": 0.05, "compound": 1.0 },
+    "FAST": { "pos": 0.07, "neg": 0.04, "compound": 0.09 },
+    "FB": { "pos": 0.1, "neg": 0.03, "compound": 1.0 },
+    "GOOGL": { "pos": 0.14, "neg": 0.05, "compound": 0.99 },
+    "INTC": { "pos": 0.18, "neg": 0.08, "compound": 0.98 }
+  },
+  "47": {
+    "AMD": { "pos": 0.07, "neg": 0.02, "compound": 0.42 },
+    "AMZN": { "pos": 0.09, "neg": 0.01, "compound": 0.59 },
+    "AAPL": { "pos": 0.12, "neg": 0.03, "compound": 0.71 },
+    "COST": { "pos": 0.09, "neg": 0.05, "compound": 0.71 },
+    "FAST": { "pos": 0.07, "neg": 0.03, "compound": 0.9 },
+    "FB": { "pos": 0.03, "neg": 0.03, "compound": 0.31 },
+    "GOOG": { "pos": 0.12, "neg": 0.01, "compound": 0.73 }
+  },
+  "46": {
+    "AAPL": { "pos": 0.13, "neg": 0.05, "compound": 0.8 },
+    "COST": { "pos": 0.09, "neg": 0.04, "compound": 1.0 },
+    "FAST": { "pos": 0.27, "neg": 0.0, "compound": 0.85 },
+    "FB": { "pos": 0.2, "neg": 0.0, "compound": 0.92 },
+    "INTC": { "pos": 0.11, "neg": 0.04, "compound": 0.95 }
+  },
+  "45": {
+    "AAPL": { "pos": 0.05, "neg": 0.02, "compound": 0.47 },
+    "TEAM": { "pos": 0.12, "neg": 0.04, "compound": 0.97 },
+    "COST": { "pos": 0.11, "neg": 0.01, "compound": 0.97 }
+  },
+  "44": {
+    "AMD": { "pos": 0.12, "neg": 0.04, "compound": 0.78 },
+    "AMZN": { "pos": 0.17, "neg": 0.02, "compound": 0.93 },
+    "AAPL": { "pos": 0.11, "neg": 0.04, "compound": 0.56 },
+    "COST": { "pos": 0.09, "neg": 0.03, "compound": 0.71 },
+    "FAST": { "pos": 0.07, "neg": 0.04, "compound": 0.08 },
+    "FB": { "pos": 0.17, "neg": 0.02, "compound": 0.93 },
+    "GOOG": { "pos": 0.14, "neg": 0.05, "compound": 0.96 },
+    "GOOGL": { "pos": 0.26, "neg": 0.01, "compound": 0.99 }
+  },
+  "43": {
+    "AMD": { "pos": 0.08, "neg": 0.0, "compound": 0.82 },
+    "AAPL": { "pos": 0.16, "neg": 0.0, "compound": 0.92 },
+    "COST": { "pos": 0.06, "neg": 0.08, "compound": 0.1 },
+    "FAST": { "pos": 0.2, "neg": 0.0, "compound": 0.97 }
+  },
+  "42": {
+    "AMD": { "pos": 0.1, "neg": 0.03, "compound": 0.91 },
+    "AMZN": { "pos": 0.12, "neg": 0.04, "compound": 0.82 },
+    "AAPL": { "pos": 0.11, "neg": 0.02, "compound": 0.76 },
+    "TEAM": { "pos": 0.11, "neg": 0.03, "compound": 0.99 },
+    "COST": { "pos": 0.1, "neg": 0.04, "compound": 0.75 },
+    "FAST": { "pos": 0.0, "neg": 0.0, "compound": 0.0 },
+    "FB": { "pos": 0.06, "neg": 0.01, "compound": 0.63 },
+    "GOOG": { "pos": 0.1, "neg": 0.03, "compound": 1.0 },
+    "GOOGL": { "pos": 0.13, "neg": 0.05, "compound": 1.0 }
+  },
+  "41": {
+    "AMD": { "pos": 0.07, "neg": 0.01, "compound": 0.42 },
+    "AMZN": { "pos": 0.08, "neg": 0.06, "compound": 0.66 },
+    "AAPL": { "pos": 0.09, "neg": 0.03, "compound": 0.69 },
+    "TEAM": { "pos": 0.12, "neg": 0.05, "compound": 0.95 },
+    "COST": { "pos": 0.08, "neg": 0.06, "compound": 0.15 },
+    "FAST": { "pos": 0.06, "neg": 0.08, "compound": -0.77 },
+    "FB": { "pos": 0.07, "neg": 0.07, "compound": 0.3 },
+    "GOOG": { "pos": 0.02, "neg": 0.01, "compound": 0.49 },
+    "GOOGL": { "pos": 0.13, "neg": 0.06, "compound": 1.0 },
+    "INTC": { "pos": 0.06, "neg": 0.04, "compound": 0.32 }
+  },
+  "40": {
+    "AMD": { "pos": 0.08, "neg": 0.01, "compound": 0.85 },
+    "AMZN": { "pos": 0.11, "neg": 0.02, "compound": 0.83 },
+    "AAPL": { "pos": 0.14, "neg": 0.01, "compound": 0.9 },
+    "TEAM": { "pos": 0.16, "neg": 0.03, "compound": 0.86 },
+    "COST": { "pos": 0.12, "neg": 0.04, "compound": 0.87 },
+    "FAST": { "pos": 0.3, "neg": 0.05, "compound": 0.95 },
+    "GOOG": { "pos": 0.11, "neg": 0.03, "compound": 0.94 },
+    "GOOGL": { "pos": 0.12, "neg": 0.04, "compound": 1.0 },
+    "INTC": { "pos": 0.0, "neg": 0.0, "compound": 0.0 }
+  },
+  "39": {
+    "AMZN": { "pos": 0.22, "neg": 0.0, "compound": 0.87 },
+    "AAPL": { "pos": 0.06, "neg": 0.06, "compound": 0.55 },
+    "TEAM": { "pos": 0.1, "neg": 0.07, "compound": 0.97 },
+    "COST": { "pos": 0.07, "neg": 0.05, "compound": 0.44 },
+    "FAST": { "pos": 0.16, "neg": 0.02, "compound": 0.99 },
+    "FB": { "pos": 0.08, "neg": 0.06, "compound": 0.95 },
+    "GOOG": { "pos": 0.06, "neg": 0.04, "compound": 0.76 },
+    "GOOGL": { "pos": 0.1, "neg": 0.07, "compound": 0.97 }
+  },
+  "38": {
+    "AMZN": { "pos": 0.06, "neg": 0.05, "compound": 0.31 },
+    "AAPL": { "pos": 0.09, "neg": 0.05, "compound": 0.38 },
+    "TEAM": { "pos": 0.13, "neg": 0.07, "compound": 0.88 },
+    "COST": { "pos": 0.11, "neg": 0.03, "compound": 0.99 },
+    "FAST": { "pos": 0.1, "neg": 0.07, "compound": 0.91 },
+    "FB": { "pos": 0.11, "neg": 0.06, "compound": 0.98 },
+    "GOOG": { "pos": 0.1, "neg": 0.06, "compound": 0.97 },
+    "GOOGL": { "pos": 0.11, "neg": 0.06, "compound": 0.98 }
+  },
+  "37": {
+    "AAPL": { "pos": 0.09, "neg": 0.02, "compound": 0.49 },
+    "TEAM": { "pos": 0.12, "neg": 0.05, "compound": 0.93 },
+    "COST": { "pos": 0.06, "neg": 0.01, "compound": 0.5 },
+    "FAST": { "pos": 0.11, "neg": 0.03, "compound": 1.0 },
+    "GOOG": { "pos": 0.13, "neg": 0.0, "compound": 0.85 }
+  },
+  "36": {
+    "AMD": { "pos": 0.11, "neg": 0.03, "compound": 0.46 },
+    "AAPL": { "pos": 0.12, "neg": 0.06, "compound": 0.35 },
+    "TEAM": { "pos": 0.09, "neg": 0.02, "compound": 0.7 },
+    "COST": { "pos": 0.14, "neg": 0.0, "compound": 0.46 },
+    "FAST": { "pos": 0.14, "neg": 0.06, "compound": 0.95 },
+    "FB": { "pos": 0.21, "neg": 0.01, "compound": 0.93 },
+    "INTC": { "pos": 0.2, "neg": 0.02, "compound": 0.97 }
+  },
+  "35": {
+    "AMD": { "pos": 0.11, "neg": 0.01, "compound": 0.64 },
+    "AAPL": { "pos": 0.1, "neg": 0.03, "compound": 0.51 },
+    "COST": { "pos": 0.19, "neg": 0.02, "compound": 0.91 },
+    "FAST": { "pos": 0.08, "neg": 0.04, "compound": 0.6 }
+  },
+  "34": {
+    "AMD": { "pos": 0.06, "neg": 0.01, "compound": 0.6 },
+    "AMZN": { "pos": 0.12, "neg": 0.02, "compound": 0.25 },
+    "AAPL": { "pos": 0.09, "neg": 0.01, "compound": 0.38 },
+    "COST": { "pos": 0.14, "neg": 0.04, "compound": 0.89 }
+  },
+  "33": {
+    "AMD": { "pos": 0.12, "neg": 0.05, "compound": 0.26 },
+    "AMZN": { "pos": 0.07, "neg": 0.02, "compound": 0.46 },
+    "AAPL": { "pos": 0.1, "neg": 0.02, "compound": 0.43 },
+    "COST": { "pos": 0.12, "neg": 0.05, "compound": 0.48 },
+    "FAST": { "pos": 0.12, "neg": 0.08, "compound": 0.46 },
+    "FB": { "pos": 0.05, "neg": 0.2, "compound": -0.96 },
+    "GOOGL": { "pos": 0.2, "neg": 0.03, "compound": 0.95 },
+    "INTC": { "pos": 0.07, "neg": 0.09, "compound": -1.0 }
+  },
+  "32": {
+    "AMD": { "pos": 0.12, "neg": 0.01, "compound": 0.87 },
+    "AMZN": { "pos": 0.17, "neg": 0.03, "compound": 0.63 },
+    "AAPL": { "pos": 0.12, "neg": 0.07, "compound": 0.41 },
+    "TEAM": { "pos": 0.12, "neg": 0.04, "compound": 1.0 },
+    "COST": { "pos": 0.08, "neg": 0.04, "compound": 0.36 },
+    "FAST": { "pos": 0.13, "neg": 0.06, "compound": 0.95 },
+    "FB": { "pos": 0.27, "neg": 0.06, "compound": 0.92 },
+    "INTC": { "pos": 0.13, "neg": 0.13, "compound": -0.08 }
+  },
+  "31": {
+    "AMD": { "pos": 0.1, "neg": 0.06, "compound": 0.27 },
+    "AMZN": { "pos": 0.1, "neg": 0.05, "compound": 0.79 },
+    "AAPL": { "pos": 0.07, "neg": 0.02, "compound": 0.64 },
+    "TEAM": { "pos": 0.11, "neg": 0.03, "compound": 0.84 },
+    "COST": { "pos": 0.07, "neg": 0.04, "compound": 0.22 },
+    "FAST": { "pos": 0.07, "neg": 0.08, "compound": 0.02 },
+    "FB": { "pos": 0.04, "neg": 0.03, "compound": 0.32 },
+    "GOOGL": { "pos": 0.09, "neg": 0.05, "compound": 0.87 }
+  },
+  "30": {
+    "AMD": { "pos": 0.05, "neg": 0.03, "compound": 0.07 },
+    "AMZN": { "pos": 0.14, "neg": 0.06, "compound": 0.55 },
+    "AAPL": { "pos": 0.15, "neg": 0.03, "compound": 0.82 },
+    "TEAM": { "pos": 0.15, "neg": 0.02, "compound": 1.0 },
+    "COST": { "pos": 0.09, "neg": 0.04, "compound": 0.69 },
+    "FB": { "pos": 0.15, "neg": 0.04, "compound": 0.96 },
+    "GOOG": { "pos": 0.01, "neg": 0.05, "compound": -0.67 }
+  },
+  "29": {
+    "AMD": { "pos": 0.04, "neg": 0.02, "compound": 0.12 },
+    "AMZN": { "pos": 0.11, "neg": 0.04, "compound": 0.34 },
+    "AAPL": { "pos": 0.13, "neg": 0.02, "compound": 0.38 },
+    "TEAM": { "pos": 0.04, "neg": 0.05, "compound": -0.19 },
+    "COST": { "pos": 0.11, "neg": 0.03, "compound": 0.63 },
+    "FAST": { "pos": 0.08, "neg": 0.05, "compound": 0.85 },
+    "FB": { "pos": 0.12, "neg": 0.02, "compound": -0.02 },
+    "GOOG": { "pos": 0.07, "neg": 0.02, "compound": 0.78 },
+    "GOOGL": { "pos": 0.12, "neg": 0.04, "compound": 0.25 }
+  },
+  "28": {
+    "AMD": { "pos": 0.12, "neg": 0.03, "compound": 0.85 },
+    "AMZN": { "pos": 0.14, "neg": 0.04, "compound": 0.96 },
+    "AAPL": { "pos": 0.18, "neg": 0.03, "compound": 0.86 },
+    "TEAM": { "pos": 0.13, "neg": 0.0, "compound": 0.97 },
+    "COST": { "pos": 0.04, "neg": 0.07, "compound": -0.14 },
+    "FAST": { "pos": 0.09, "neg": 0.0, "compound": 0.47 },
+    "INTC": { "pos": 0.0, "neg": 0.0, "compound": 0.0 }
+  },
+  "27": {
+    "AMD": { "pos": 0.05, "neg": 0.07, "compound": 0.12 },
+    "AAPL": { "pos": 0.05, "neg": 0.0, "compound": 0.2 },
+    "TEAM": { "pos": 0.08, "neg": 0.03, "compound": 0.44 },
+    "COST": { "pos": 0.1, "neg": 0.04, "compound": 0.57 },
+    "FAST": { "pos": 0.06, "neg": 0.02, "compound": 0.36 },
+    "FB": { "pos": 0.06, "neg": 0.03, "compound": 0.07 },
+    "GOOGL": { "pos": 0.08, "neg": 0.0, "compound": 0.17 }
+  },
+  "26": {
+    "AMD": { "pos": 0.14, "neg": 0.01, "compound": 0.77 },
+    "AMZN": { "pos": 0.11, "neg": 0.05, "compound": 0.58 },
+    "AAPL": { "pos": 0.0, "neg": 0.0, "compound": 0.0 },
+    "COST": { "pos": 0.11, "neg": 0.03, "compound": 0.7 },
+    "FAST": { "pos": 0.1, "neg": 0.03, "compound": 0.71 },
+    "FB": { "pos": 0.13, "neg": 0.03, "compound": 0.9 },
+    "INTC": { "pos": 0.0, "neg": 0.0, "compound": 0.0 }
+  },
+  "25": {
+    "AAPL": { "pos": 0.0, "neg": 0.0, "compound": 0.0 },
+    "COST": { "pos": 0.12, "neg": 0.08, "compound": 0.95 },
+    "FAST": { "pos": 0.11, "neg": 0.06, "compound": 1.0 },
+    "INTC": { "pos": 0.05, "neg": 0.08, "compound": -0.26 }
+  },
+  "24": {
+    "AMD": { "pos": 0.14, "neg": 0.02, "compound": 0.46 },
+    "AMZN": { "pos": 0.1, "neg": 0.06, "compound": 0.21 },
+    "AAPL": { "pos": 0.1, "neg": 0.06, "compound": 0.02 },
+    "COST": { "pos": 0.16, "neg": 0.01, "compound": 0.8 },
+    "FAST": { "pos": 0.12, "neg": 0.1, "compound": -0.08 },
+    "FB": { "pos": 0.12, "neg": 0.12, "compound": -0.86 },
+    "GOOG": { "pos": 0.12, "neg": 0.12, "compound": -0.86 },
+    "GOOGL": { "pos": 0.2, "neg": 0.12, "compound": 0.81 }
+  },
+  "23": {
+    "AMD": { "pos": 0.08, "neg": 0.0, "compound": 0.82 },
+    "AMZN": { "pos": 0.05, "neg": 0.02, "compound": 0.87 },
+    "TEAM": { "pos": 0.21, "neg": 0.03, "compound": 0.98 },
+    "COST": { "pos": 0.08, "neg": 0.1, "compound": 0.0 },
+    "FAST": { "pos": 0.07, "neg": 0.03, "compound": 0.46 }
+  },
+  "22": { "COST": { "pos": 0.05, "neg": 0.0, "compound": 0.33 } },
+  "21": {
+    "AMD": { "pos": 0.08, "neg": 0.0, "compound": 0.82 },
+    "AMZN": { "pos": 0.19, "neg": 0.0, "compound": 0.83 },
+    "AAPL": { "pos": 0.1, "neg": 0.12, "compound": 0.15 },
+    "TEAM": { "pos": 0.1, "neg": 0.04, "compound": 0.51 },
+    "COST": { "pos": 0.12, "neg": 0.03, "compound": 0.78 },
+    "FAST": { "pos": 0.09, "neg": 0.05, "compound": 0.7 },
+    "FB": { "pos": 0.16, "neg": 0.0, "compound": 0.51 }
+  },
+  "20": {
+    "AMD": { "pos": 0.1, "neg": 0.02, "compound": 0.6 },
+    "AMZN": { "pos": 0.0, "neg": 0.0, "compound": 0.0 },
+    "AAPL": { "pos": 0.13, "neg": 0.0, "compound": 0.38 },
+    "TEAM": { "pos": 0.14, "neg": 0.08, "compound": 0.84 },
+    "COST": { "pos": 0.09, "neg": 0.05, "compound": 0.47 },
+    "FAST": { "pos": 0.11, "neg": 0.02, "compound": 0.99 }
+  },
+  "19": {
+    "AMD": { "pos": 0.11, "neg": 0.04, "compound": 0.81 },
+    "AMZN": { "pos": 0.15, "neg": 0.08, "compound": 0.92 },
+    "AAPL": { "pos": 0.15, "neg": 0.08, "compound": 0.92 },
+    "TEAM": { "pos": 0.14, "neg": 0.08, "compound": 0.8 },
+    "COST": { "pos": 0.11, "neg": 0.04, "compound": 0.88 },
+    "FAST": { "pos": 0.09, "neg": 0.06, "compound": 0.45 },
+    "FB": { "pos": 0.17, "neg": 0.06, "compound": 0.62 }
+  },
+  "18": {
+    "AMZN": { "pos": 0.05, "neg": 0.08, "compound": -0.67 },
+    "AAPL": { "pos": 0.05, "neg": 0.08, "compound": -0.67 },
+    "COST": { "pos": 0.05, "neg": 0.06, "compound": 0.02 },
+    "FAST": { "pos": 0.11, "neg": 0.11, "compound": 0.06 },
+    "GOOGL": { "pos": 0.05, "neg": 0.08, "compound": -0.67 }
+  },
+  "17": {
+    "AMD": { "pos": 0.06, "neg": 0.02, "compound": 0.44 },
+    "AMZN": { "pos": 0.13, "neg": 0.02, "compound": 0.5 },
+    "COST": { "pos": 0.08, "neg": 0.03, "compound": 0.57 },
+    "FAST": { "pos": 0.1, "neg": 0.04, "compound": 0.38 },
+    "FB": { "pos": 0.06, "neg": 0.02, "compound": 0.31 },
+    "GOOG": { "pos": 0.08, "neg": 0.02, "compound": 0.51 }
+  },
+  "16": {
+    "AMD": { "pos": 0.1, "neg": 0.04, "compound": 0.69 },
+    "AMZN": { "pos": 0.03, "neg": 0.08, "compound": -0.48 },
+    "AAPL": { "pos": 0.02, "neg": 0.06, "compound": -0.28 },
+    "COST": { "pos": 0.09, "neg": 0.08, "compound": 0.04 },
+    "FAST": { "pos": 0.16, "neg": 0.05, "compound": 0.9 },
+    "FB": { "pos": 0.02, "neg": 0.13, "compound": -0.67 },
+    "GOOG": { "pos": 0.01, "neg": 0.19, "compound": -0.98 },
+    "GOOGL": { "pos": 0.03, "neg": 0.02, "compound": -0.25 }
+  },
+  "15": {
+    "AMD": { "pos": 0.1, "neg": 0.03, "compound": 0.59 },
+    "AMZN": { "pos": 0.14, "neg": 0.06, "compound": 0.6 },
+    "AAPL": { "pos": 0.12, "neg": 0.06, "compound": 0.83 },
+    "COST": { "pos": 0.12, "neg": 0.1, "compound": 0.08 },
+    "FAST": { "pos": 0.09, "neg": 0.08, "compound": -0.09 }
+  },
+  "14": {
+    "AMD": { "pos": 0.1, "neg": 0.01, "compound": 0.82 },
+    "AAPL": { "pos": 0.1, "neg": 0.05, "compound": 0.41 },
+    "TEAM": { "pos": 0.16, "neg": 0.01, "compound": 0.98 },
+    "COST": { "pos": 0.06, "neg": 0.07, "compound": -0.01 },
+    "GOOG": { "pos": 0.03, "neg": 0.03, "compound": 0.0 },
+    "GOOGL": { "pos": 0.03, "neg": 0.03, "compound": 0.0 }
+  },
+  "13": {
+    "AMD": { "pos": 0.08, "neg": 0.08, "compound": 0.12 },
+    "AMZN": { "pos": 0.11, "neg": 0.06, "compound": 0.42 },
+    "AAPL": { "pos": 0.1, "neg": 0.01, "compound": 0.54 },
+    "TEAM": { "pos": 0.12, "neg": 0.0, "compound": 0.73 },
+    "COST": { "pos": 0.13, "neg": 0.05, "compound": 0.38 },
+    "FAST": { "pos": 0.11, "neg": 0.04, "compound": 0.54 },
+    "GOOGL": { "pos": 0.1, "neg": 0.02, "compound": 0.43 },
+    "INTC": { "pos": 0.0, "neg": 0.0, "compound": 0.0 }
+  },
+  "12": {
+    "AMD": { "pos": 0.07, "neg": 0.07, "compound": -0.06 },
+    "AMZN": { "pos": 0.05, "neg": 0.05, "compound": 0.3 },
+    "AAPL": { "pos": 0.14, "neg": 0.03, "compound": 0.27 },
+    "COST": { "pos": 0.06, "neg": 0.02, "compound": 0.44 },
+    "FAST": { "pos": 0.09, "neg": 0.12, "compound": -0.29 },
+    "FB": { "pos": 0.0, "neg": 0.0, "compound": 0.0 }
+  },
+  "11": {
+    "AMZN": { "pos": 0.11, "neg": 0.0, "compound": 0.91 },
+    "AAPL": { "pos": 0.06, "neg": 0.08, "compound": -0.5 },
+    "TEAM": { "pos": 0.05, "neg": 0.02, "compound": 0.49 },
+    "COST": { "pos": 0.07, "neg": 0.03, "compound": 0.2 },
+    "FAST": { "pos": 0.06, "neg": 0.07, "compound": -0.47 }
+  },
+  "10": {
+    "AMZN": { "pos": 0.08, "neg": 0.04, "compound": 0.3 },
+    "COST": { "pos": 0.13, "neg": 0.07, "compound": 0.79 }
+  },
+  "9": {
+    "AMD": { "pos": 0.15, "neg": 0.01, "compound": 0.64 },
+    "AMZN": { "pos": 0.0, "neg": 0.0, "compound": 0.0 },
+    "AAPL": { "pos": 0.22, "neg": 0.0, "compound": 0.93 },
+    "FB": { "pos": 0.0, "neg": 0.0, "compound": 0.0 }
+  },
+  "8": { "COST": { "pos": 0.2, "neg": 0.04, "compound": 0.97 } },
+  "7": {
+    "COST": { "pos": 0.11, "neg": 0.0, "compound": 0.74 },
+    "FAST": { "pos": 0.11, "neg": 0.02, "compound": 0.75 }
+  },
+  "6": {
+    "AMD": { "pos": 0.08, "neg": 0.0, "compound": 0.82 },
+    "AAPL": { "pos": 0.09, "neg": 0.04, "compound": 1.0 },
+    "TEAM": { "pos": 0.11, "neg": 0.0, "compound": 0.49 },
+    "COST": { "pos": 0.1, "neg": 0.04, "compound": 0.36 },
+    "FB": { "pos": 0.08, "neg": 0.13, "compound": -0.24 },
+    "GOOG": { "pos": 0.16, "neg": 0.14, "compound": 0.1 },
+    "GOOGL": { "pos": 0.05, "neg": 0.01, "compound": 0.43 }
+  },
+  "5": {
+    "AMZN": { "pos": 0.0, "neg": 0.0, "compound": 0.0 },
+    "AAPL": { "pos": 0.0, "neg": 0.0, "compound": 0.0 },
+    "TEAM": { "pos": 0.09, "neg": 0.05, "compound": 1.0 },
+    "COST": { "pos": 0.04, "neg": 0.01, "compound": 0.44 },
+    "FAST": { "pos": 0.09, "neg": 0.05, "compound": 1.0 },
+    "FB": { "pos": 0.0, "neg": 0.07, "compound": -0.17 },
+    "GOOGL": { "pos": 0.07, "neg": 0.02, "compound": 0.48 },
+    "INTC": { "pos": 0.09, "neg": 0.05, "compound": 1.0 }
+  },
+  "4": {
+    "AMZN": { "pos": 0.08, "neg": 0.0, "compound": 0.83 },
+    "AAPL": { "pos": 0.03, "neg": 0.03, "compound": -0.15 },
+    "TEAM": { "pos": 0.1, "neg": 0.04, "compound": 0.99 },
+    "COST": { "pos": 0.07, "neg": 0.08, "compound": -0.08 },
+    "GOOGL": { "pos": 0.08, "neg": 0.0, "compound": 0.83 },
+    "INTC": { "pos": 0.0, "neg": 0.16, "compound": -0.74 }
+  },
+  "3": {
+    "AMD": { "pos": 0.18, "neg": 0.0, "compound": 0.86 },
+    "AMZN": { "pos": 0.11, "neg": 0.02, "compound": 0.66 },
+    "AAPL": { "pos": 0.11, "neg": 0.03, "compound": 0.48 },
+    "TEAM": { "pos": 0.05, "neg": 0.09, "compound": -0.98 },
+    "COST": { "pos": 0.15, "neg": 0.03, "compound": 0.86 },
+    "FB": { "pos": 0.16, "neg": 0.05, "compound": 0.33 },
+    "GOOG": { "pos": 0.12, "neg": 0.04, "compound": 0.29 },
+    "GOOGL": { "pos": 0.14, "neg": 0.02, "compound": 0.85 }
+  },
+  "2": {
+    "AMD": { "pos": 0.09, "neg": 0.04, "compound": 0.44 },
+    "AMZN": { "pos": 0.11, "neg": 0.01, "compound": 0.49 },
+    "AAPL": { "pos": 0.21, "neg": 0.03, "compound": 0.84 },
+    "COST": { "pos": 0.09, "neg": 0.04, "compound": 0.42 },
+    "FAST": { "pos": 0.07, "neg": 0.12, "compound": -0.59 },
+    "FB": { "pos": 0.14, "neg": 0.02, "compound": 0.78 },
+    "GOOGL": { "pos": 0.21, "neg": 0.01, "compound": 0.98 }
+  },
+  "1": {
+    "AMD": { "pos": 0.12, "neg": 0.0, "compound": 0.78 },
+    "AMZN": { "pos": 0.12, "neg": 0.05, "compound": 0.97 },
+    "TEAM": { "pos": 0.12, "neg": 0.05, "compound": 0.97 },
+    "COST": { "pos": 0.28, "neg": 0.0, "compound": 0.96 },
+    "FAST": { "pos": 0.14, "neg": 0.07, "compound": 0.84 },
+    "FB": { "pos": 0.06, "neg": 0.03, "compound": 0.49 },
+    "GOOGL": { "pos": 0.12, "neg": 0.05, "compound": 0.97 }
+  }
+}

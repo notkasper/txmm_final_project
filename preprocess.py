@@ -16,10 +16,9 @@ END_DATE = dt.datetime(2020, 11, 30)
 # Seconds in a day which translated to bin size
 BIN_SIZE_UTC = 86400
 
-# We only need some of the data in the raw post, specifically the only dictionary in ther
-
 
 def getPostData(post_raw):
+    # We only need some of the data in the raw post, specifically the only dictionary in ther
     post_dict = None
     for element in post_raw:
         if type(element) is dict:
