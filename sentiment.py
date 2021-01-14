@@ -27,7 +27,7 @@ def getPostData(post_raw):
     return post_dict
 
 
-# For each day between a start and end date, get all the posts in that day and sort them by ticker
+# For each day between a start and end date, for each day between those dates, get posts from that day and sort them by ticker
 def main():
     nlp = spacy.load("en_core_web_sm")
     analyzer = SentimentIntensityAnalyzer()
