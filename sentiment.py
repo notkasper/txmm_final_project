@@ -1,74 +1,77 @@
-import datetime as dt
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
 from datetime import date, timedelta, datetime, timezone
+from datetime import datetime
 import time
 import json
+import numpy as np
+import string
 import math
 import spacy
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import nltk
+import re
+
+nltk.download('vader_lexicon')
+nltk.download('stopwords')
 
 # Top 10 tickers with most posts
 TICKERS = ["AMD", "AMZN", "AAPL", "TEAM",
            "COST", "FAST", "FB", "GOOG", "GOOGL", "INTC"]
-# Earliest bin date
-START_DATE = dt.datetime(2020, 1, 1)
-# Latest bin date
-END_DATE = dt.datetime(2020, 11, 30)
-# Seconds in a day which translated to bin size
-BIN_SIZE_UTC = 86400
-
-# We only need some of the data in the raw post, specifically the only dictionary in ther
 
 
-def getPostData(post_raw):
-    post_dict = None
-    for element in post_raw:
-        if type(element) is dict:
-            post_dict = element
-    return post_dict
-
-
-# For each day between a start and end date, for each day between those dates, get posts from that day and sort them by ticker
 def main():
-    nlp = spacy.load("en_core_web_sm")
-    analyzer = SentimentIntensityAnalyzer()
-    delta = timedelta(days=1)
-    start_date = int(START_DATE.replace(
-        tzinfo=timezone.utc).timestamp())
-    end_date = int(END_DATE.replace(
-        tzinfo=timezone.utc).timestamp())
-
-    days = int((end_date-start_date) / BIN_SIZE_UTC)
+    # setup sentiment analysis tools
+    sid = SentimentIntensityAnalyzer()
+    stop_words = set(stopwords.words("english"))
     buffer = {}
-    for ticker in TICKERS:
-        with open("./data/" + ticker + ".json") as posts_json:
-            posts = json.load(posts_json)
-            for post in posts:
-                post_data = getPostData(post)
-                utc = post_data["created_utc"]
-                day = math.floor((utc - start_date) /
-                                 BIN_SIZE_UTC) * BIN_SIZE_UTC + start_date
-                if not day in buffer:
-                    buffer[day] = {}
-                if not ticker in buffer[day]:
-                    buffer[day][ticker] = []
-                buffer[day][ticker].append(post_data)
-    with open("sorted_posts.json", 'w') as outfile:
-        json.dump(buffer, outfile)
 
+    # for each week, calculate the sentiment for each ticker
+    with open("sorted_posts.json") as posts_json:
+        sorted_posts = json.load(posts_json)
+        for date_utc in sorted_posts:
+            a_date = datetime.fromtimestamp(int(date_utc))
+            week_number = a_date.isocalendar()[1]
+            buffer[week_number] = {}
+            print("week nr", week_number)
+            for ticker in TICKERS:
+                buffer[week_number][ticker] = {}
+                if ticker in sorted_posts[date_utc]:
+                    posts = sorted_posts[date_utc][ticker]
+                    buffer[week_number][ticker]["post_texts"] = []
+                    sentiments = []
 
-def displayTickerCount(ticker):
-    with open("sorted_posts.json", 'r') as stonks_json:
-        stonks = json.load(stonks_json)
-        counter = 0
-        for key in stonks.keys():
-            tickers_and_posts = stonks[key]
-            if ticker in tickers_and_posts:
-                posts = tickers_and_posts[ticker]
-                counter += len(posts)
-        print("total ", ticker, " posts: ", counter)
+                    # for each post of a specific ticker on a specific day
+                    scores = []
+                    for post in posts:
+                        if not "selftext" in post:
+                            continue
+                        text = post["selftext"]
+                        buffer[week_number][ticker]["post_texts"].append(text)
+                        score = sid.polarity_scores(text)
+                        scores.append(score)
+                    if not "scores" in buffer[week_number][ticker]:
+                        buffer[week_number][ticker]["scores"] = []
+                    buffer[week_number][ticker]["scores"] = buffer[week_number][ticker]["scores"] + scores
+
+        weekly_averages = {}
+        for week_number in buffer:
+            weekly_averages[week_number] = {}
+            for ticker in buffer[week_number]:
+                if not "scores" in buffer[week_number][ticker]:
+                    continue
+                scores = buffer[week_number][ticker]["scores"]
+                ticker_weekly_averages = {
+                    "pos": round(np.mean([score["pos"] for score in scores]), 2),
+                    "neg": round(np.mean([score["neg"] for score in scores]), 2),
+                    "compound": round(np.mean([score["compound"] for score in scores]), 2)
+                }
+                weekly_averages[week_number][ticker] = ticker_weekly_averages
+
+        # save to a new file
+        with open("weekly_ticker_sentiments.json", 'w') as outfile:
+            json.dump(weekly_averages, outfile)
 
 
 if __name__ == "__main__":
     main()
-    for ticker in TICKERS:
-        displayTickerCount(ticker)
