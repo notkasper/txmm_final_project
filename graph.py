@@ -22,6 +22,11 @@ with open("final.json") as final_json:
     neutral = 0
     incorrect = 0
 
+    tp = 0
+    fp = 0
+    tn = 0
+    fn = 0
+
     for week_nr in range(1, len(data.keys())):
         current_week = str(week_nr)
         next_week = str(week_nr + 1)
@@ -39,10 +44,16 @@ with open("final.json") as final_json:
             compound_sentiment = data[current_week][ticker]["compound"]
             if next_week_price > current_week_price and compound_sentiment >= 0.05:
                 correct += 1
+                tp += 1
                 buffer[ticker]["correct"] += 1
+            elif next_week_price < current_week_price and compound_sentiment >= 0.05:
+                fp += 1
             elif next_week_price < current_week_price and compound_sentiment <= -0.05:
                 correct += 1
+                tn += 1
                 buffer[ticker]["correct"] += 1
+            elif next_week_price > current_week_price and compound_sentiment <= -0.05:
+                fn += 1
             elif compound_sentiment > -0.05 and compound_sentiment < 0.05:
                 neutral += 1
                 buffer[ticker]["neutral"] += 1
@@ -52,6 +63,11 @@ with open("final.json") as final_json:
 
     print("correct", correct /
           (correct + incorrect) * 100, "%")
+
+    print("tp", tp)
+    print("fp", fp)
+    print("tn", tn)
+    print("fn", fn)
 
     def plot_individual():
         labels = TICKERS
